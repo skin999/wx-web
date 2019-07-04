@@ -1,0 +1,11 @@
+<!--pages/start/start.wxml-->
+<view class="container" wx:for="{{sales}}" wx:key="id">
+  <view class="tab-image">
+    <image  class="" src="../../images/coupons-pic.jpg" />
+    <view class="gohome" bindtap="goHome">即将为您跳过广告{{second}}</view>
+  </view>
+  <view bindtap="home" class="logo">
+    <view class="title">真诚服务</view>
+    <view class="subtitle">期待您的光临</view>
+  </view>
+</view>

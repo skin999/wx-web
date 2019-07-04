@@ -1,0 +1,48 @@
+<!--index.wxml-->
+<navigation id='Navigation' show-search='{{showSearch}}' class="fix-top" animation="{{fadeAni}}"></navigation>
+<view class="container">
+    <view class='slider'>
+<swiper indicator-dots="{{indicatorDots}}"  
+
+           autoplay="{{autoplay}}" interval="2500" duration="400" circular circular="true">  
+
+         <block wx:for="{{imgUrls}}">  
+
+           <swiper-item>  
+
+              <navigator url="{{item.link}}" hover-class="navigator-hover">  
+
+               <image src="{{item.url}}" class="slide-image" width="355" height="150"/>  
+
+              </navigator>  
+
+           </swiper-item>  
+         </block>  
+ </swiper> 
+ 
+	</view>
+	<view class="index-menu-bg">
+		<view class="index-menu flex">
+			<view class="menu-list" wx:for="{{sales}}" wx:key="id" bindtap="tapSales" data-id="{{item.linkUrl}}">
+			  <image src="{{item.picUrl}}" />
+			  <view class="text">{{item.title}}</view>
+			</view>
+		</view>
+		<view class="index-hot flex">
+			<block wx:for="{{hot}}" wx:key="hot">
+				<navigator hover-class="none" class="hot-item" url="{{item.linkUrl}}">
+					<image src="{{item.picUrl}}"></image>
+				</navigator>
+			</block>
+		</view>
+	</view>
+
+  
+</view>
+	<view class="index-hot flex">
+			<block wx:for="{{hot}}" wx:key="hot">
+				<navigator hover-class="none" class="hot-item" url="{{item.linkUrl}}">
+					<image src="{{item.picUrl}}"></image>
+				</navigator>
+			</block>
+		</view>
